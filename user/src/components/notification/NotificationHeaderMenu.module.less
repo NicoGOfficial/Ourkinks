@@ -1,0 +1,84 @@
+@import '../../../style/vars.less';
+
+.notification-menu {
+  width: 350px;
+  max-height: calc(75vh);
+  overflow-y: auto;
+
+
+  a {
+    float: right;
+  }
+
+  :global .ant-menu-item {
+    height: 75px;
+    overflow: hidden;
+    border-bottom: 0.5px solid #ccc;
+
+    .ant-card-meta-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  :global .ant-menu-item:last-child {
+    border-bottom: none;
+  }
+
+  :global .notification-item {
+    padding: 5px;
+    display: flex;
+
+    .notification-item-list {
+      line-height: 18px;
+
+      .message {
+        white-space: normal;
+        line-height: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        -moz-line-clamp: 2;
+        -moz-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+
+      .time {
+        line-height: 20px;
+      }
+    }
+
+    .notification-docw {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #7b5dbd;
+      right: 0;
+      border-radius: 50%;
+      top: 25px;
+    }
+
+  }
+
+  :global .notification-unread {
+    background-color: rgba(206, 206, 206, 0.24);
+  }
+
+  :global .notification-read {
+    background-color: rgba(206, 206, 206, 0.082);
+    color: rgba(20, 20, 20, 0.336);
+  }
+}
+
+.btn-dismiss-read-all {
+  margin-left: 70px;
+  padding: 5px;
+  border-color: white;
+  color: @primary-color;
+
+  &:hover {
+    border-color: white;
+  }
+}

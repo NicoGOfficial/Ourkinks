@@ -1,0 +1,36 @@
+@import '../../style/vars.less';
+
+.search-lg-top {
+  margin-top: 15px;
+
+  :global .ant-input-search-button {
+    height: 40px;
+    width: auto;
+  }
+
+  :global .ant-input-search {
+    .ant-input {
+      height: 40px;
+    }
+
+    .ant-input-group-wrapper {
+      overflow: hidden;
+    }
+
+    .ant-input-affix-wrapper {
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .ant-input-group-addon {
+      .ant-input-search-button {
+        border-radius: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: @mobile-screen) {
+    padding: 5px;
+    padding-right: 7px;
+  }
+}

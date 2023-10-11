@@ -1,0 +1,235 @@
+@import '../../../style/vars.less';
+
+.model-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 325px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 44px;
+
+  :global .card-stat {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 2px;
+    color: @gray;
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, #9a9a9a00 0%, #292929 100%);
+  }
+
+  :global .card-live {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #7b5dbd;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  :global .model-name {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    color: @white;
+    background-color: @primary-color;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 7px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: @primary-font-bold;
+    height: 37px;
+  }
+
+  :global .online-status {
+    width: 15px;
+    height: 15px;
+    background-color: @gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    opacity: 0.8;
+    z-index: 1;
+
+    .online {
+      display: none;
+    }
+
+    &.active {
+      background-color: @success-color;
+      opacity: 1;
+
+      .online {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        animation: blink 1s linear infinite;
+        opacity: 0.7;
+        background-color: @success-color;
+      }
+    }
+  }
+
+  :global .stream-status {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    opacity: 0.8;
+    z-index: 1;
+    padding: 3px;
+    font-weight: bold;
+    // font-size: 24px;
+    // background: none;
+
+    &.private {
+      // color: @error-color;
+      background-image: url('/user/public/private-streaming.png');
+    }
+
+    &.public {
+      // color: @success-color;
+      background-image: url('/user/public/public-streaming.png');
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+
+    .model-name {
+      background-color: @secondary-color;
+    }
+  }
+}
+
+@media screen and (max-width: @tablet-screen) {
+  height: 225px;
+
+  .model-card {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    height: 325px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 44px;
+
+    :global .card-stat {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 2px;
+      color: @gray;
+      font-size: 11px;
+      position: absolute;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, #9a9a9a00 0%, #292929 100%);
+    }
+
+    :global .card-live {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #7b5dbd;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    :global .model-name {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      color: @white;
+      background-color: @primary-color;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 7px;
+      text-align: center;
+      font-weight: 600;
+      text-transform: capitalize;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-family: @primary-font-bold;
+      height: 37px;
+    }
+
+    :global .online-status {
+      width: 15px;
+      height: 15px;
+      background-color: @gray;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      opacity: 0.8;
+      z-index: 1;
+
+      .online {
+        display: none;
+      }
+
+      &.active {
+        background-color: @success-color;
+        opacity: 1;
+
+        .online {
+          display: block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          animation: blink 1s linear infinite;
+          opacity: 0.7;
+          background-color: @success-color;
+        }
+      }
+    }
+
+    :global .stream-status {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      opacity: 0.8;
+      z-index: 1;
+      padding: 3px;
+      font-weight: bold;
+      // font-size: 24px;
+      // background: none;
+
+      &.private {
+        // color: @error-color;
+        background-image: url('/user/public/private-streaming.png');
+      }
+
+      &.public {
+        // color: @success-color;
+        background-image: url('/user/public/public-streaming.png');
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      .model-name {
+        background-color: @secondary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import '../../style/vars';
+
+.switchBtn {
+  display: flex;
+  justify-content: center;
+
+  :global button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-family: @primary-font-bold;
+    cursor: pointer;
+
+    &:hover {
+      color: @primary-color;
+    }
+
+    &.active {
+      color: @primary-color;
+      border-bottom: 2px solid;
+    }
+  }
+}
+
+.welcomeBox {
+  background-color: @light-blue;
+  margin: 3em 0;
+  padding: 3em;
+  border-radius: 10px;
+
+  :global h3 {
+    font-size: 1.8em;
+    font-weight: 800;
+    font-family: @primary-font-bold;
+  }
+
+  :global ul {
+    padding-left: 18px;
+
+    li {
+      color: @grey-color;
+      list-style: disc;
+    }
+  }
+}
+
+.registerBox {
+  :global .ant-select-selector {
+    height: 40px;
+
+    .ant-select-selection-item {
+      line-height: 40px;
+    }
+  }
+
+  :global .ant-form-item {
+    margin-bottom: 10px;
+  }
+}

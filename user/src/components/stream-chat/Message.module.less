@@ -1,0 +1,120 @@
+@import '../../../style/default.less';
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message .timestamp {
+  display: flex;
+  justify-content: flex-start;
+  color: #999;
+  font-weight: 600;
+  font-size: 8px;
+  margin: 5px 0px;
+}
+
+.message.mine .timestamp {
+  justify-content: flex-end;
+}
+
+.message .bubble-container {
+  font-size: 14px;
+  display: flex;
+}
+
+.message.mine .bubble-container {
+  justify-content: flex-end;
+}
+
+// .message.start .bubble-container .bubble {
+//   /* margin-top: 10px; */
+//   border-top-left-radius: 20px;
+// }
+
+// .message.end .bubble-container .bubble {
+//   border-bottom-left-radius: 20px;
+//   /* margin-bottom: 10px; */
+// }
+
+// .message.mine.start .bubble-container .bubble {
+//   margin-top: 10px;
+// }
+
+// .message.mine.end .bubble-container .bubble {
+//   margin-bottom: 10px;
+// }
+
+.message .bubble-container .bubble {
+  margin: 1px 0px;
+  background: @primary-color;
+  color: @white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  max-width: 75%;
+  position: relative;
+
+  :global .close-btn {
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    padding: 0px 7px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: #fff;
+  }
+}
+
+.message.mine .bubble-container .bubble {
+  background: #fff6d9;
+  max-width: 75%;
+  color: #000;
+  overflow-wrap: break-word;
+}
+
+.message.tip .bubble-container .bubble {
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  background: @secondary-color  !important;
+  color: white !important;
+}
+
+.message.tip .timestamp {
+  text-align: center;
+  display: inline-block;
+}
+
+.message-time {
+  font-size: 10px;
+  margin: 0;
+}
+
+.user-custom {
+  .message {
+    .bubble-container {
+      .bubble {
+        border-radius: 5px !important;
+        margin-bottom: 10px;
+        background: #fff;
+        color: #888;
+        font-size: 13px;
+
+        .u-name {
+          font-weight: 600;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .timestamp {
+      justify-content: center;
+    }
+  }
+
+  .mine {
+    .bubble-container {
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../../style/default.less';
+
+.conversation-stream {
+  width: 100%;
+  min-height: 530px;
+  border: solid 0.5px @primary-color;
+
+  :global .tablist {
+    margin: 0;
+  }
+
+  .ant-tabs>.ant-tabs-nav,
+  .ant-tabs>div>.ant-tabs-nav {
+    margin: 0 !important;
+  }
+
+  :global .ant-tabs-tab-btn {
+    transition: all 0.1s;
+  }
+
+  :global .ant-tabs-nav-list {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 0.5px @primary-color;
+
+    .ant-tabs-tab {
+      flex: 1;
+      justify-content: center;
+      margin: 0;
+      height: 50px;
+    }
+
+    .ant-tabs-tab-active {
+      background-color: @primary-color;
+      color: #ffffff;
+
+      .ant-tabs-tab-btn {
+        color: #fff;
+      }
+    }
+  }
+}

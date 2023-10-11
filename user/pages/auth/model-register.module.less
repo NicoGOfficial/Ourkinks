@@ -1,0 +1,40 @@
+@import '../../style/vars.less';
+
+.register-box {
+  [class~="ant-select-selector"] {
+    height: 40px;
+
+    [class~="ant-select-selection-item"] {
+      line-height: 40px;
+    }
+  }
+
+  [class~="ant-form-item"] {
+    margin-bottom: 10px;
+  }
+
+  .register-form {
+
+    .model-photo-verification {
+      [class~="ant-form-item-control"] {
+        text-align: left;
+      }
+
+      [class~="ant-form-item-label"] {
+        font-weight: 600;
+      }
+    }
+
+    .id-block {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .img-id {
+        max-width: 50%;
+        width: 175px;
+      }
+    }
+  }
+}

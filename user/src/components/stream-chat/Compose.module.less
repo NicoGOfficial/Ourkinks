@@ -1,0 +1,148 @@
+@import '../../../style/default.less';
+
+
+.compose {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: none;
+}
+
+.compose-input {
+  flex: 1;
+  padding: 5px 10px;
+  font-size: 14px;
+  height: 30px;
+  background: none;
+  color: #333;
+  outline: thin;
+
+  &::placeholder {
+    color: #000;
+  }
+}
+
+.compose-input::placeholder {
+  opacity: 0.3;
+}
+
+.compose {
+  :global .toolbar-button {
+    color: #bbbbbf;
+    margin-left: 15px;
+  }
+
+  :global .toolbar-button:hover {
+    color: #99999c;
+  }
+}
+
+.grp-icons {
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  color: @primary-color;
+}
+
+.grp-send-btn {
+  font-size: 25px;
+  padding: 0 5px;
+}
+
+.send-emotion-btn {
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.grp-emotions {
+  position: relative;
+  right: 0;
+  top: 0;
+
+  &:hover {
+    [class~="emoji-picker-react"] {
+      display: flex;
+    }
+  }
+
+  :global .emoji-picker-react {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+  }
+
+
+
+  .anticon-smile {
+    font-size: 25px;
+  }
+
+
+}
+
+.grp-file-icon {
+  background: url('/gallery.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 28px;
+
+  .avatar-uploader {
+    opacity: 0;
+
+    .ant-upload {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      margin: 0;
+
+      img {
+        width: 20px !important;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
+
+    .ant-upload-text {
+      display: none;
+    }
+  }
+}
+
+.user-custom {
+  .compose {
+    border: none;
+    border-top: 1px solid #ff0065;
+    background: transparent;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .compose-input {
+      color: #333;
+
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+}
+
+.grp-emotions {
+  :global .anticon {
+    font-size: 22px;
+    color: @grey-color;
+    ;
+  }
+}

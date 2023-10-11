@@ -1,0 +1,87 @@
+@import '../../../style/vars.less';
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message .timestamp {
+  display: flex;
+  justify-content: flex-start;
+  color: @grey-color;
+  font-weight: 600;
+  font-size: 8px;
+  margin: 5px 0px;
+}
+
+.message.mine .timestamp {
+  justify-content: flex-end;
+}
+.message .bubble-container {
+  font-size: 14px;
+  display: flex;
+}
+
+.message.mine .bubble-container {
+  justify-content: flex-end;
+}
+
+.message .bubble-container .bubble {
+  margin: 4px 0px;
+  background: @theme-color;
+  padding: 4px 15px;
+  border-radius: 10px;
+  max-width: 75%;
+  border-radius: 5px;
+  color: @white;
+  overflow-wrap: break-word;
+}
+
+.message .bubble-container .bubble-image {
+  margin: 4px 0px;
+  background: @theme-color;
+  padding: 0;
+  border-radius: 10px;
+  max-width: 75%;
+  color: @white;
+  overflow-wrap: break-word;
+
+  [class~="ant-image-img"] {
+    border-radius: 10px;
+  }
+
+  [class~="ant-image-mask"] {
+    border-radius: 10px;
+  }
+
+
+}
+
+.message .bubble-container {
+  :global .sell-message:hover {
+    cursor: pointer;
+    background: @secondary-color;
+  }
+}
+
+.message.mine .bubble-container .bubble {
+  background: @message-color;
+  max-width: 75%;
+  color: @black;
+  overflow-wrap: break-word;
+}
+
+.message-time {
+  font-size: 10px;
+  margin: 0;
+}
+
+.bubble-container .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.message.mine .bubble-container .avatar {
+  margin: 5px;
+}

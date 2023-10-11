@@ -1,0 +1,49 @@
+@import '../../../style/vars.less';
+
+.account-form {
+  .phone-code {
+    .ant-select-selection-item, .ant-select-selector {
+      min-width: 160px;
+      max-width: 200px;
+    }
+    .phone-item {
+      .ant-input-group-addon {
+        height: 40px;
+        width: auto;
+        border-right: none;
+      }
+      .select-phone-code {
+        margin: 0;
+        .ant-select-selector {
+          border: none !important;
+          box-shadow: none !important;
+        }
+      }
+
+      .ant-input {
+        border-radius: 0 0.5em 0.5em 0;
+        border: 1px solid #e5e5e5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @mobile-screen) {
+  .account-form {
+    .phone-code {
+      .ant-input-group {
+        display: block;
+        .ant-input-group-addon {
+          min-width: 100% !important;
+          max-width: 100% !important;
+          width: 100% !important;
+          border-right: 1px solid #e5e5e5 !important;
+          display: block;
+        }
+      }
+      .ant-input {
+        border-radius: 0.5em;
+      }
+    }
+  }
+}
